@@ -10,7 +10,10 @@ class Solution {
         Set<String> set = new HashSet<>();
         for(String s1 : arr) {
             for(String s2 : s1.split(",")) {
-                if(set.add(s2)) answer[idx++] = Integer.parseInt(s2);
+                if(set.add(s2)){
+                    answer[idx++] = Integer.parseInt(s2);
+                    break;
+                }
             }
         }
         return answer;
